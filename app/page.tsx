@@ -11,7 +11,7 @@ import {
   SiMysql, 
   SiNodedotjs, 
   SiReact, 
-  SiPhp, 
+  SiPhp,
   SiWordpress, 
   SiMariadb, 
   SiMongodb, 
