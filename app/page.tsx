@@ -1,17 +1,46 @@
+import { 
+  SiDocker, 
+  SiKubernetes, 
+  SiJenkins, 
+  SiLinux, 
+  SiTerraform, 
+  SiVmware, 
+  SiGit, 
+  SiNginx, 
+  SiApache, 
+  SiMysql, 
+  SiNodedotjs, 
+  SiReact, 
+  SiPhp, 
+  SiWordpress, 
+  SiMariadb, 
+  SiMongodb, 
+  SiPodman 
+} from "react-icons/si";
+import { FaAws, FaInfinity, FaMagento } from "react-icons/fa6";
+
 export default function RajSoniPortfolio() {
   const skills = [
-    "AWS",
-    "Docker",
-    "Kubernetes",
-    "Jenkins",
-    "Linux",
-    "Terraform",
-    "VMware",
-    "CI/CD",
-    "Git",
-    "Nginx",
-    "Apache",
-    "MySQL",
+    { name: "AWS", icon: <FaAws className="text-[#FF9900]" /> },
+    { name: "Docker", icon: <SiDocker className="text-[#2496ED]" /> },
+    { name: "Podman", icon: <SiPodman className="text-[#892CA0]" /> },
+    { name: "Kubernetes", icon: <SiKubernetes className="text-[#326CE5]" /> },
+    { name: "Jenkins", icon: <SiJenkins className="text-[#D24939]" /> },
+    { name: "Linux", icon: <SiLinux className="text-[#FCC624]" /> },
+    { name: "Terraform", icon: <SiTerraform className="text-[#844FBA]" /> },
+    { name: "VMware", icon: <SiVmware className="text-[#607078]" /> },
+    { name: "CI/CD", icon: <FaInfinity className="text-[#000000] dark:text-white" /> },
+    { name: "Git", icon: <SiGit className="text-[#F05032]" /> },
+    { name: "Nginx", icon: <SiNginx className="text-[#009639]" /> },
+    { name: "Apache", icon: <SiApache className="text-[#D22128]" /> },
+    { name: "MySQL", icon: <SiMysql className="text-[#4479A1]" /> },
+    { name: "MariaDB", icon: <SiMariadb className="text-[#003545]" /> },
+    { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
+    { name: "Node.js", icon: <SiNodedotjs className="text-[#339933]" /> },
+    { name: "React", icon: <SiReact className="text-[#61DAFB]" /> },
+    { name: "PHP", icon: <SiPhp className="text-[#777BB4]" /> },
+    { name: "WordPress", icon: <SiWordpress className="text-[#21759B]" /> },
+    { name: "Magento", icon: <FaMagento className="text-[#EE672F]" /> },
   ];
 
   const experiences = [
@@ -20,10 +49,12 @@ export default function RajSoniPortfolio() {
       company: "Squad Technology",
       period: "Jan 2025 – Present",
       points: [
-        "Built and optimized CI/CD pipelines using Jenkins reducing deployment time by 60%.",
-        "Automated AWS deployments improving scalability and operational efficiency.",
-        "Managed Docker and Podman based containerized environments.",
-        "Handled production incidents, uptime monitoring, and infrastructure troubleshooting.",
+        "Architected and optimized CI/CD pipelines using Jenkins, Git, and AWS DevOps, significantly improving deployment reliability and system uptime.",
+        "Designed and managed scalable server architectures across Linux (RedHat/Ubuntu), optimizing deployments for Node.js, React, PHP, and various database stacks.",
+        "Orchestrated containerized infrastructure (Docker, Podman) and virtualized server environments (VMware) to enhance resource utilization.",
+        "Administered web servers (Nginx, Apache, LiteSpeed) and implemented proactive monitoring using Prometheus, New Relic, and Monit.",
+        "Resolved escalated infrastructure incidents, providing cross-team troubleshooting for server issues, website outages, and database connectivity.",
+        "Strengthened security and business continuity by implementing automated server patching, Veeam/S3 backups, and disaster recovery plans.",
       ],
     },
     {
@@ -116,10 +147,15 @@ export default function RajSoniPortfolio() {
           <div className="flex flex-wrap gap-4">
             {skills.map((skill) => (
               <span
-                key={skill}
-                className="px-5 py-3 rounded-2xl bg-gray-800 border border-gray-700 hover:border-blue-500 transition"
+                key={skill.name}
+                className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-gray-800 border border-gray-700 hover:border-blue-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 cursor-default group"
               >
-                {skill}
+                <span className="text-2xl group-hover:scale-110 transition-transform duration-300">
+                  {skill.icon}
+                </span>
+                <span className="font-medium text-gray-200 group-hover:text-white transition-colors">
+                  {skill.name}
+                </span>
               </span>
             ))}
           </div>
@@ -192,7 +228,7 @@ export default function RajSoniPortfolio() {
 
       {/* Contact Section */}
       <section id="contact" className="px-8 py-20 max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-6">Let's Connect</h2>
+        <h2 className="text-4xl font-bold mb-6">Let&apos;s Connect</h2>
 
         <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
           Open to DevOps, Cloud, Infrastructure, and Site Reliability Engineering opportunities.
@@ -204,6 +240,13 @@ export default function RajSoniPortfolio() {
             className="bg-blue-500 hover:bg-blue-600 transition px-8 py-4 rounded-2xl font-medium"
           >
             raj67231@gmail.com
+          </a>
+
+          <a
+            href="tel:9879066497"
+            className="bg-blue-500 hover:bg-blue-600 transition px-8 py-4 rounded-2xl font-medium"
+          >
+            9879066497
           </a>
 
           <a
