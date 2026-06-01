@@ -83,21 +83,21 @@ export default function RajSoniPortfolio() {
   return (
     <div className="min-h-screen bg-gray-950 text-white font-sans">
       {/* Hero Section */}
-      <section className="px-8 py-20 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <section className="px-8 py-20 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center overflow-hidden">
         <div>
-          <p className="text-blue-400 uppercase tracking-widest mb-3 text-sm">
+          <p className="text-blue-400 uppercase tracking-widest mb-3 text-sm animate-fade-in-up">
             DevOps Engineer | Cloud Engineer
           </p>
-          <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in-up animation-delay-100">
             Raj Soni
           </h1>
-          <p className="text-gray-300 text-lg leading-relaxed mb-8">
-            Results-driven DevOps Engineer with 3+ years of experience in AWS Cloud,
+          <p className="text-gray-300 text-lg leading-relaxed mb-8 animate-fade-in-up animation-delay-200">
+            Results-driven DevOps Engineer with 3.6 years of experience in AWS Cloud,
             CI/CD automation, Linux server administration, and scalable production
             deployments.
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 animate-fade-in-up animation-delay-300">
             <a
               href="#contact"
               className="bg-blue-500 hover:bg-blue-600 transition px-6 py-3 rounded-2xl font-medium"
@@ -114,24 +114,24 @@ export default function RajSoniPortfolio() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl p-10 border border-gray-800 shadow-2xl">
+        <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl p-10 border border-gray-800 shadow-2xl animate-fade-in animation-delay-400">
           <div className="grid grid-cols-2 gap-6">
-            <div className="bg-gray-900 rounded-2xl p-5 border border-gray-800">
+            <div className="bg-gray-900 rounded-2xl p-5 border border-gray-800 hover:-translate-y-1 transition-transform duration-300">
               <h3 className="text-3xl font-bold text-blue-400">3+</h3>
               <p className="text-gray-400 mt-2">Years Experience</p>
             </div>
 
-            <div className="bg-gray-900 rounded-2xl p-5 border border-gray-800">
+            <div className="bg-gray-900 rounded-2xl p-5 border border-gray-800 hover:-translate-y-1 transition-transform duration-300">
               <h3 className="text-3xl font-bold text-green-400">60%</h3>
               <p className="text-gray-400 mt-2">Deployment Time Reduced</p>
             </div>
 
-            <div className="bg-gray-900 rounded-2xl p-5 border border-gray-800">
+            <div className="bg-gray-900 rounded-2xl p-5 border border-gray-800 hover:-translate-y-1 transition-transform duration-300">
               <h3 className="text-3xl font-bold text-purple-400">AWS</h3>
               <p className="text-gray-400 mt-2">Cloud Infrastructure</p>
             </div>
 
-            <div className="bg-gray-900 rounded-2xl p-5 border border-gray-800">
+            <div className="bg-gray-900 rounded-2xl p-5 border border-gray-800 hover:-translate-y-1 transition-transform duration-300">
               <h3 className="text-3xl font-bold text-yellow-400">99.9%</h3>
               <p className="text-gray-400 mt-2">System Uptime</p>
             </div>
@@ -197,32 +197,35 @@ export default function RajSoniPortfolio() {
       </section>
 
       {/* Projects Section */}
-      <section className="px-8 py-20 bg-gray-900/40">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-gray-900/40">
+        <div className="max-w-7xl mx-auto px-8">
           <h2 className="text-4xl font-bold mb-12">Projects</h2>
+        </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-900 rounded-3xl border border-gray-800 p-8 hover:border-blue-500 transition">
-              <h3 className="text-2xl font-semibold mb-4">CI/CD Automation</h3>
-              <p className="text-gray-400 leading-relaxed">
-                Designed automated Jenkins pipelines for streamlined application deployment and delivery.
-              </p>
-            </div>
-
-            <div className="bg-gray-900 rounded-3xl border border-gray-800 p-8 hover:border-blue-500 transition">
-              <h3 className="text-2xl font-semibold mb-4">Docker Deployment</h3>
-              <p className="text-gray-400 leading-relaxed">
-                Containerized production applications using Docker for consistency and scalability.
-              </p>
-            </div>
-
-            <div className="bg-gray-900 rounded-3xl border border-gray-800 p-8 hover:border-blue-500 transition">
-              <h3 className="text-2xl font-semibold mb-4">Kubernetes POC</h3>
-              <p className="text-gray-400 leading-relaxed">
-                Deployed and managed sample workloads on Kubernetes clusters using Minikube.
-              </p>
-            </div>
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-8 px-8 pb-10 hide-scrollbar max-w-7xl mx-auto">
+          <div className="min-w-[300px] md:min-w-[400px] snap-center shrink-0 bg-gray-900 rounded-3xl border border-gray-800 p-8 hover:border-blue-500 hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+            <h3 className="text-2xl font-semibold mb-4 group-hover:text-blue-400 transition-colors">CI/CD Automation</h3>
+            <p className="text-gray-400 leading-relaxed">
+              Designed automated Jenkins pipelines for streamlined application deployment and delivery.
+            </p>
           </div>
+
+          <div className="min-w-[300px] md:min-w-[400px] snap-center shrink-0 bg-gray-900 rounded-3xl border border-gray-800 p-8 hover:border-blue-500 hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+            <h3 className="text-2xl font-semibold mb-4 group-hover:text-blue-400 transition-colors">Docker Deployment</h3>
+            <p className="text-gray-400 leading-relaxed">
+              Containerized production applications using Docker for consistency and scalability.
+            </p>
+          </div>
+
+          <div className="min-w-[300px] md:min-w-[400px] snap-center shrink-0 bg-gray-900 rounded-3xl border border-gray-800 p-8 hover:border-blue-500 hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+            <h3 className="text-2xl font-semibold mb-4 group-hover:text-blue-400 transition-colors">Kubernetes POC</h3>
+            <p className="text-gray-400 leading-relaxed">
+              Deployed and managed sample workloads on Kubernetes clusters using Minikube.
+            </p>
+          </div>
+          
+          {/* Decorative end spacer to allow the last item to scroll into center if needed */}
+          <div className="min-w-[1px] md:min-w-[8px] shrink-0"></div>
         </div>
       </section>
 
@@ -246,7 +249,7 @@ export default function RajSoniPortfolio() {
             href="tel:9879066497"
             className="bg-blue-500 hover:bg-blue-600 transition px-8 py-4 rounded-2xl font-medium"
           >
-            9879066497
+            +919879066497
           </a>
 
           <a
