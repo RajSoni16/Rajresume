@@ -82,8 +82,21 @@ export default function RajSoniPortfolio() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-white font-sans">
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800">
+        <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+          <div className="text-2xl font-bold text-blue-400">Raj Soni</div>
+          <div className="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+            <a href="#about" className="hover:text-white hover:text-blue-400 transition-colors">About Us</a>
+            <a href="#skills" className="hover:text-white hover:text-blue-400 transition-colors">Technical Skills</a>
+            <a href="#projects" className="hover:text-white hover:text-blue-400 transition-colors">My Projects</a>
+            <a href="#contact" className="hover:text-white hover:text-blue-400 transition-colors">Contact Me</a>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="px-8 py-20 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center overflow-hidden">
+      <section id="about" className="px-8 py-20 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center overflow-hidden">
         <div>
           <p className="text-blue-400 uppercase tracking-widest mb-3 text-sm animate-fade-in-up">
             DevOps Engineer | Cloud Engineer
@@ -140,7 +153,7 @@ export default function RajSoniPortfolio() {
       </section>
 
       {/* Skills Section */}
-      <section className="px-8 py-16 bg-gray-900/50">
+      <section id="skills" className="px-8 py-16 bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-10">Technical Skills</h2>
 
@@ -197,7 +210,7 @@ export default function RajSoniPortfolio() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 bg-gray-900/40">
+      <section id="projects" className="py-20 bg-gray-900/40">
         <div className="max-w-7xl mx-auto px-8">
           <h2 className="text-4xl font-bold mb-12">Projects</h2>
         </div>
